@@ -182,7 +182,42 @@
     <button class="arrow right" onclick="moveSlide(1)">&#10095;</button>
   </div>
 
+
   <div class="container">
+            <!-- サーバー情報カード - listパラメータがonの時のみ表示 -->
+        <div class="server-info-card" id="serverInfoCard" style="display: none;">
+            <div class="server-info-header">
+                <div class="server-icon-circle">
+                    <i class="fas fa-server server-icon"></i>
+                </div>
+                <h2 class="server-name">サーバー情報</h2>
+            </div>
+
+            <div class="server-status-container">
+                <div class="status-pill">
+                    <div class="status-dot" id="statusDot"></div>
+                    <span id="serverStatusText">ステータス確認中...</span>
+                </div>
+            </div>
+
+            <div class="server-details">
+                <div class="server-detail-item">
+                    <span class="server-detail-label">バージョン:</span>
+                    <span class="server-detail-value" id="serverInfoVersion">確認中...</span>
+                </div>
+                <div class="server-detail-item">
+                    <span class="server-detail-label">プレイヤー:</span>
+                    <span class="server-detail-value" id="serverInfoPlayers">確認中...</span>
+                </div>
+            </div>
+
+            <div class="refresh-button-container">
+                <button class="refresh-button" id="refreshServerStatus" title="ステータス更新">
+                    <i class="fas fa-sync-alt"></i>
+                    <span>更新する</span>
+                </button>
+            </div>
+        </div>
     <!-- サーバー情報セクション -->
     <div class="info-section">
       <h2>サーバー情報</h2>
